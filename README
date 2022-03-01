@@ -1,0 +1,19 @@
+Makes hard-links for all files of the specified directory to current directory.
+It works like junction, however objects made by this can be accessed even if original dirs are removed.
+
+
+##usage
+Put the dir of this library on your python path.
+
+Then,
+```$ python -m hardlink_dir /./your/path/of/sources```
+
+hardlink_dir [-h] [-r] [--stops_if_exists] path
+
+positional arguments:
+  path                Path of original sources.
+
+options:
+  -h, --help          show this help message and exit
+  -r, --no-recursive  Hard-links to the objects of child dir in default. Stop it if this is given.
+  --stops_if_exists   Raise exception if same name object exists.
